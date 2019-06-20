@@ -1,0 +1,51 @@
+var body =document.body
+ body.style.backgroundColor="silver"
+ 
+ var h1=document.getElementById("title")
+ h1.style.color="green"
+ 
+//  var h3=document.getElementByTagName("h3")
+ 
+ var li = document.createElement("li")
+ li.innerHTML=("passions")
+ var fruit = document.createElement("fruList")
+ fruList.appendChild(li)
+ 
+  var vegetable = document.createElement("li")
+ vegetable.innerHTML=("spinach")
+ var vegt = document.createElement("vegList")
+ vegList.appendChild(vegetable)
+ 
+
+
+
+
+
+ASYNC
+
+
+
+Async - declares an asynchronous function (async function someName(){...}).
+Automatically transforms a regular function into a Promise.
+When called async functions resolve with whatever is returned in their body.
+Async functions enable the use of await.
+It is build on top of Promises and is compatible with all existing Promise-based APIs.
+example of async
+
+async function myFavouriteFruit() {
+return 'mango';
+}
+function myBestFruit() {
+return Promise.resolve('mango');
+}
+
+
+
+
+
+  AWAIT
+pauses the execution of async functions(var result = await someAsyncCall();).
+
+When placed in front of a Promise call, await forces the rest of the code to wait until that Promise finishes and returns a result.
+Await works only with Promises, it does not work with callbacks.
+Await can only be used inside async functions.

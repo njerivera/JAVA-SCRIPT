@@ -1,0 +1,17 @@
+var body =document.body
+ body.style.backgroundColor="silver"
+ 
+ var h1=document.getElementById("title")
+ h1.style.color="green"
+ 
+ 
+ 
+ var li = document.createElement("li")
+ li.innerHTML=("passions")
+ var fruit = document.createElement("fruList")
+ fruList.appendChild(li)
+ 
+  var vegetable = document.createElement("li")
+ vegetable.innerHTML=("spinach")
+ var vegt = document.createElement("vegList")
+ vegList.appendChild(vegetable)

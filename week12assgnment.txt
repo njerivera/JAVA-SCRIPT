@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Greens Kiosk</title>
+</head>
+<body>
+  <h1 id="title">Welcome to Greens Kiosk</h1>
+  <p>We sell fruits and vegetables</p>
+  <h3>Fruits</h3>
+  <ul id="fruList">
+    <li>Mangoes</li>
+    <li>Bananas</li>
+    <li>Water Melons</li>
+  </ul>
+  
+   <input name="fruit" id ="fruit"  placeholder ="fruit"  type="text">
+  <button onClick ="fruits"> submit</button>
+
+  <h3>Vegetables</h3>
+  <input name="vegetables" id="vegetables" placeholder= "vegetable" type ="text">
+  <ul id="vegList">
+    <li>Onions</li>
+    <li>Tomatoes</li>
+    <li>Kales</li>
+  </ul>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var element = document.getElementById("name")
+var list = document.createElement("li")
+function addFruit() {
+  return element.value
+}
+name.onClick = function(){
+  console.log(fruList.append(addFruit()))
+}
+list.innerHTML = addFruit()
+var ul = document.getElementById("fruList")
+ul.appendChild(list)
+
+
+
+var element = document.getElementById("name")
+var list = document.createElement("li")//
+function addVegetable() {
+  return element.value
+}
+name.onClick = function(){
+  console.log(vegList.append(addVegetable()))
+}
+list.innerHTML = addVegetable()
+var ul = document.getElementById("vegList")
+ul.appendChild(list)
