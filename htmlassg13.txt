@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+   <title>Greens Kiosk</title>
+   
+ 
+
+</head>
+
+<body>
+   <h1 id="title">Welcome to Greens Kiosk</h1>
+   <p>We sell fruits and vegetables</p>
+   <h2>Products</h2>
+   <ul id="products">
+    <script type="text/javascript">
+        fetch('http://localhost:5000/products')
+         .then(response => response.json())
+        .then(response => {
+            response.forEach(item => {
+                var vera = document.getElementById('products')
+                var vee= document.createElement('li');
+                var vero = document.createTextNode(item.name);
+                vee.appendChild(vero);
+                vera.appendChild(vee);
+
+            })
+            console.log(response)
+        })
+     
+        
+        </script><!-- Show products list from API -->
+   </ul>
+   <h3>Fruits</h3>
+   <ul id="fruList">
+    <script type="text/javascript">
+        fetch('http://localhost:5000/products/fruits')
+         .then(response => response.json())
+        .then(response => {
+            response.forEach(item => {
+                var a = document.getElementById('fruList')
+                var b = document.createElement('li');
+                var c = document.createTextNode(item.name);
+                b.appendChild(c);
+                a.appendChild(b);
+
+            })
+            console.log(response)
+        })
+     
+        
+        </script><!-- Show fruits from API -->
+   </ul>
+   <h3>Vegetables</h3>
+   <ul id="vegList">
+    <script type="text/javascript">
+        fetch('http://localhost:5000/products/vegetables')
+         .then(response => response.json())
+        .then(response => {
+            response.forEach(item => {
+                var e = document.getElementById('vegList')
+                var f = document.createElement('li');
+                var g = document.createTextNode(item.name);
+                f.appendChild(g);
+                e.appendChild(f);
+
+            })
+            console.log(response)
+        })
+     
+        
+        
+        </script><!-- Show vegetables from API -->
+   </ul>
+</body>
+
+</html>
