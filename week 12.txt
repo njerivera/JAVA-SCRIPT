@@ -1,0 +1,159 @@
+var title= document.getElementById("title");
+
+  var toggleState = false;
+
+var toggleColor = () => {
+  toggleState =!toggleState;
+  var color = toggleState ? 'green' :'silver';
+  title.style.color = color;
+}
+
+setInterval(toggleColor,1000);
+
+
+
+var h3s = document.getElementsByTagName("h3");
+var fruitH3 =h3s[0];
+var vegH3 = h3s[1];
+var fruList = document.getElementById('fruList');
+var vegList = document.getElementById('vegList');
+
+
+
+ var collapseState = false;
+
+function collapse(element){
+   collapseState =!collapseState;
+  var style = collapseState ? 'none' : 'block';
+  element.style.display = style;
+  
+  
+}
+
+fruitH3.addEventListener('click',() => collapse (fruList));
+vegH3.addEventListener('click',() => collapse (vegList));
+
+
+var inputFru = document.getElementById("inputFru");
+
+
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Greens Kiosk</title>
+</head>
+<body>
+  <h1 id="title">Welcome to Greens Kiosk</h1>
+  <p>We sell fruits and vegetables</p>
+  <h3>Fruits</h3>
+  <ul id="fruList">
+    <li>Mangoes</li>
+    <li>Bananas</li>
+    <li>Water Melons</li>
+  </ul>
+  
+  
+  <input type="text" id= "inputFru"/>
+  <input type="submit" id="btnFru"/>
+  
+  
+  <h3>Vegetables</h3>
+  <ul id="vegList">
+    <li>Onions</li>
+    <li>Tomatoes</li>
+    <li>Kales</li>
+  </ul>
+  
+  <input type="text" id= "inputVeg"/>
+  
+</body>
+</html>
+
+
+
+
+Animate the title to toggle between green and silver font color after each second
+Animate fruits list to be collapsible
+Animate vegetables list to be collapsible
+Add an input field to append a fruit to the fruits list on clicking a button submit fruit
+Add an input field to append a vegetable to the vegetables list on pressing enter button on the keyboard
+
+
+
+
+
+
+var title= document.getElementById("title");
+
+  var toggleState = false;
+
+var toggleColor = () => {
+  toggleState =!toggleState;
+  var color = toggleState ? 'green' :'silver';
+  title.style.color = color;
+}
+
+setInterval(toggleColor,1000);
+
+
+
+var h3s = document.getElementsByTagName("h3");
+var fruitH3 =h3s[0];
+var vegH3 = h3s[1];
+var fruList = document.getElementById('fruList');
+var vegList = document.getElementById('vegList');
+
+
+
+ var collapseState = false;
+
+function collapse(element){
+   collapseState =!collapseState;
+  var style = collapseState ? 'none' : 'block';
+  element.style.display = style;
+  
+  
+}
+
+fruitH3.addEventListener('click',() => collapse (fruList));
+vegH3.addEventListener('click',() => collapse (vegList));
+
+
+var inputFru = document.getElementById("inputFru");
+var btnFru = document.getElementById("btnFru");
+
+
+ var addFruit =() => { 
+  var newFruit = inputFru.value;
+  if(!newFruit) return;
+  inputFru.value = null;
+  var li = document.createElement("li");
+  var textNode = document.createTextNode(newFruit);
+   li.appendChild(textNode);
+   fruList.appendChild(li);
+}
+
+btnFru.addEventListener('click', addFruit);
+
+
+
+
+
+inputVeg.addEventListener("keyup",(event) =>{
+                        
+    if(event.keyCode === 13){
+  var newVeg = inputVeg.value;
+  if(!newVeg) return;
+  inputVeg.value = null;
+  var li = document.createElement("li");
+  var textNode = document.createTextNode(newVeg);
+   li.appendChild(textNode);
+   vegList.appendChild(li);
+}
+});
+
+
+
+  
+
+  
